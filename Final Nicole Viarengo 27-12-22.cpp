@@ -150,7 +150,6 @@ void totales_pcia(int n) // 3)Armar y mostrar una lista ordenada de mayor a meno
 				aux=vector[i];
 				vector[i]=vector[k]; //COMPARA CON UNA VARIABLE AUXILIAR !!!! K
 				vector[k]=aux;
-				aux++;
 			}
 		}
 	}
@@ -176,18 +175,18 @@ void mostrar_lista()
 
 void santafe(int n) //4)Armar y mostrar un vector con las cosechas en toneladas de la pcia de santa fe (cuyo valor en toneladas sea un numero primo)
 {
-	int senial=0, cont=0, j;
-	for(int f=0; f<n; f++)
+	int senial=0, cont=0, j=0;
+	for(int f=0; f<n; f++) //recorremos la matriz
 	{
 		for(int c=0; c<4; c++)
 		{
-			if(cosecha[f][0]==2 and cosecha[f][3]%2==0)
+			if(cosecha[f][0]==2 and cosecha[f][3]%2==0) //2-Santa Fe 3=toneladas
 			{
 				senial=1;
 				if(senial==0)
 				{
 					cont++;
-					vector_sf[j]=cosecha[f][3];
+					vector_sf[j]=cosecha[f][3]; //pasamos al vector
 					j++;
 				}
 			} else {
